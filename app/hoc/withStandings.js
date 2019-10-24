@@ -1,5 +1,4 @@
 import { withProps } from 'recompose'
-import _ from 'lodash'
 
 export const MLB_URL = 'https://api.mobileqa.mlbinfra.com/api/interview/v1/records'
 

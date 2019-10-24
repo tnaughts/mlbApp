@@ -12,9 +12,9 @@ import ButtonSlider           from '../../components/ButtonSlider'
 import DivisionStandings      from '../../components/DivisionStandings'
 import TeamService            from '../../Services/TeamService'
 
-const DIVISION = 'division'
-const LEAGUE = 'league'
-const DEFAULT_LEAGUE= 'AL'
+const DIVISION        = 'division'
+const LEAGUE          = 'league'
+const DEFAULT_LEAGUE  = 'AL'
 
 
 export default class Standings extends React.PureComponent<Props> {
@@ -38,6 +38,7 @@ export default class Standings extends React.PureComponent<Props> {
   
   fetchStandings(){
     const { getStandings } = this.props
+    
     getStandings().then((resp) => {  
       this.setState({loading: false, standings: resp})
     }).catch(error => { 

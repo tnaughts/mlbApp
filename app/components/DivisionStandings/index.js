@@ -37,19 +37,19 @@ export default class DivisionStandings extends React.PureComponent<Props> {
     } = this.props
     if ((divisions && divisions.length > 1) && (teams && teams.length > 1)){
       return <FlatList
-      initialNumToRender={5}
-      windowSize={2}
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={style.contentContainer}
-      style={parentStyle}
-      data={divisions}
-      keyExtractor={this.keyExtractor}
-      renderItem={this.renderItem}
-      refreshControl={
-        <RefreshControl 
-        onRefresh={refetch} 
-        refreshing={loading}/>
-        }/>    
+        initialNumToRender={5}
+        windowSize={2}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={style.contentContainer}
+        style={parentStyle}
+        data={divisions}
+        keyExtractor={this.keyExtractor}
+        renderItem={this.renderItem}
+        refreshControl={
+          <RefreshControl 
+          onRefresh={refetch} 
+          refreshing={loading}/>
+          }/>    
     }
     
     return null

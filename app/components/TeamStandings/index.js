@@ -50,17 +50,15 @@ export default class TeamStandings extends React.PureComponent<Props> {
       style: parentStyle
     } = this.props
 
-    return <View style={parentStyle}>
-      <FlatList
+    return <FlatList
+        scrollEnabled={false}
         initialNumToRender={1}
         windowSize={5}
         data={teams}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={style.contentContainer}
         renderItem={this.renderItem}
         keyExtractor={this.keyExtractor}
-        style={style.challengeSlider}
+        style={parentStyle}
         ListHeaderComponent={this.renderListHeader} />
-      </View>
   }
 }
