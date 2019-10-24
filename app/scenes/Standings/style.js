@@ -3,7 +3,6 @@ import {dimens} from '../../styles/dimens'
 
 export default StyleSheet.create({
   container: {
-    borderWidth:    1,
     padding:        24,
     flex:           1
   },
