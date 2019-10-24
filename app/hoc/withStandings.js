@@ -1,14 +1,14 @@
 import { withProps } from 'recompose'
+import axios          from 'axios'
 
 export const MLB_URL = 'https://api.mobileqa.mlbinfra.com/api/interview/v1/records'
 
 async function getStandings(){
   try {
-    const response = await fetch(
+    const response = await axios.get(
       MLB_URL,
     );
-    const responseJson = await response.json();
-    return responseJson
+    return response.data
   } catch (error) {
     console.error(error);
   }
