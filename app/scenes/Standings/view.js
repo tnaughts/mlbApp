@@ -68,7 +68,7 @@ export class Standings extends React.Component<Props> {
         <Animatable.View 
           animation={'fadeIn'} 
           key={selectedLeague} 
-          delay={150}
+          delay={0}
           useNativeDriver>
           <DivisionStandings
             style={style.divisionStandings}

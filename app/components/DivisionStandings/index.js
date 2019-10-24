@@ -37,7 +37,7 @@ export default class DivisionStandings extends React.Component<Props> {
     } = this.props
     if ((divisions && divisions.length > 1) && (teams && teams.length > 1)){
       return <FlatList
-        initialNumToRender={5}
+        initialNumToRender={10}
         windowSize={2}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={style.contentContainer}
@@ -45,6 +45,7 @@ export default class DivisionStandings extends React.Component<Props> {
         data={divisions}
         keyExtractor={this.keyExtractor}
         renderItem={this.renderItem}
+        showsHorizontalScrollIndicator={false}
         refreshControl={
           <RefreshControl 
           onRefresh={refetch} 

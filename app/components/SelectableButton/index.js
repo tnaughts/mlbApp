@@ -4,6 +4,7 @@ import {
   Text, 
   StyleSheet 
 }                       from 'react-native'
+import * as Animatable  from 'react-native-animatable'
 
 import style              from './style'
 import { colors }         from '../../styles/colors'
@@ -23,8 +24,9 @@ export default class SelectableButton extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props)
-    this.state   = { themeStyle: StyleSheet.create({}) }
-    this.onPress = this.onPress.bind(this)
+    this.state          = { themeStyle: StyleSheet.create({}) }
+    this.onPress        = this.onPress.bind(this)
+    this.handleTextRef  = this.handleTextRef.bind(this)
   }
   
   componentDidMount() {
@@ -36,6 +38,10 @@ export default class SelectableButton extends React.Component<Props, State> {
     if(selectedChanged) {
       this.generateThemeStyle()
     }
+  }
+  
+  handleTextRef(ref){
+    this.textRef = ref
   }
   
   generateThemeStyle() {
@@ -70,6 +76,18 @@ export default class SelectableButton extends React.Component<Props, State> {
   onPress() {
     const { onPress, selectableType } = this.props
     onPress(selectableType)
+    
+    const popIn = {
+      0: {
+        opacity: 0,
+        scale:   0.93
+      },
+      1: {
+        opacity: 1,
+        scale:   1
+      }
+    }
+    this.textRef.animate(popIn)
   }
 
   render() {
@@ -80,10 +98,11 @@ export default class SelectableButton extends React.Component<Props, State> {
       underlayColor={colors.primaryLight}
       style={[style.button, themeStyle.background, themeStyle.borderColor ]} 
       onPress={this.onPress}>
-      <Text 
+      <Animatable.Text
+        ref={this.handleTextRef}
         style={[style.buttonText, themeStyle.text]}>
         {selectableType ? selectableType : 'All'}
-      </Text>
+      </Animatable.Text>
     </TouchableHighlight>
   }
 }

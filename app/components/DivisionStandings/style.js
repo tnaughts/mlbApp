@@ -14,5 +14,9 @@ export default StyleSheet.create({
   
   divisionContainer: {
     padding: 10
+  },
+  
+  contentContainer: {
+    paddingBottom: 500
   }
 })

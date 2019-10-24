@@ -52,7 +52,7 @@ export default class TeamStandings extends React.Component<Props> {
 
     return <FlatList
         scrollEnabled={false}
-        initialNumToRender={1}
+        initialNumToRender={10}
         windowSize={5}
         data={teams}
         showsHorizontalScrollIndicator={false}
