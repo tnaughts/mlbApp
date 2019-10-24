@@ -76,7 +76,7 @@ export default class SelectableButton extends React.Component<Props, State> {
     const { selectableType, selected} = this.props
     const { themeStyle } = this.state
 
-    return <TouchableHighlight 
+    return <TouchableHighlight
       underlayColor={colors.primaryLight}
       style={[style.button, themeStyle.background, themeStyle.borderColor ]} 
       onPress={this.onPress}>
