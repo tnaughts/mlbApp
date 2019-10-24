@@ -19,7 +19,7 @@ type Props = {
 
 
 
-export default class ButtonSlider extends React.PureComponent<Props> {
+export default class ButtonSlider extends React.Component<Props> {
 
   constructor(props: Props) {
     super(props)

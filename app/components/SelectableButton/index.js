@@ -19,7 +19,7 @@ type State = {
   themeStyle: StyleSheet.Styles
 }
 
-export default class SelectableButton extends React.PureComponent<Props, State> {
+export default class SelectableButton extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props)

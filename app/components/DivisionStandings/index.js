@@ -18,7 +18,7 @@ type Props = {
   teams:      any[]
 }
 
-export default class DivisionStandings extends React.PureComponent<Props> {
+export default class DivisionStandings extends React.Component<Props> {
 
   constructor(props: Props) {
     super(props)

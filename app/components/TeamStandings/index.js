@@ -15,7 +15,7 @@ type Props = {
   style?:      StyleSheet.styles
 }
 
-export default class TeamStandings extends React.PureComponent<Props> {
+export default class TeamStandings extends React.Component<Props> {
 
   constructor(props: Props) {
     super(props)

@@ -17,7 +17,7 @@ const LEAGUE          = 'league'
 const DEFAULT_LEAGUE  = 'AL'
 
 
-export class Standings extends React.PureComponent<Props> {
+export class Standings extends React.Component<Props> {
 
   constructor(props: Props) {
     super(props)
