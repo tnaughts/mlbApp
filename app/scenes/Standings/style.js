@@ -18,6 +18,10 @@ export default StyleSheet.create({
   
   divisionStandings: {
     marginVertical: dimens.pageGutter,
+  },
+  
+  errorText:{
+    textAlign: 'center'
   }
   
 })

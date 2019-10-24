@@ -85,7 +85,7 @@ export default class Standings extends React.PureComponent<Props> {
       return <ActivityIndicator  animating={true} style={style.loading}/>
     }
       
-    return <View style={style.loading}><Text>We are having issues with the app please try again later</Text></View>  
+    return <View style={style.loading}><Text style={style.errorText}>We are having issues fetching standings right now please check back later</Text></View>  
   }
   
   render(){
